@@ -84,6 +84,7 @@
             this.label3.Size = new System.Drawing.Size(166, 15);
             this.label3.TabIndex = 5;
             this.label3.Text = "FOR TESTING REPORTS";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // button1
             // 
@@ -135,6 +136,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
             this.Text = "welcome";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
