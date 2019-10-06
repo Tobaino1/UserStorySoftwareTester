@@ -30,11 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
@@ -56,25 +56,6 @@
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Welcome Form";
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(450, 197);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(140, 42);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "&Testing Reports";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(450, 72);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(140, 42);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "&User Story";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox1
             // 
@@ -105,6 +86,24 @@
             this.label3.Text = "FOR TESTING REPORTS";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(450, 72);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(140, 42);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "&User Story";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(450, 197);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(140, 42);
+            this.button2.TabIndex = 11;
+            this.button2.Text = "&Testing Reports";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -122,9 +121,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(271, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(254, 13);
+            this.label1.Size = new System.Drawing.Size(218, 13);
             this.label1.TabIndex = 18;
-            this.label1.Text = "USER STORY SOFTWARE TESTING BASE TOOL";
+            this.label1.Text = "USER STORY BASE SOFTWARE TESTER";
             // 
             // Form1
             // 

@@ -112,50 +112,5 @@ namespace UserStorySoftwareTester
             MessageBox.Show("record has been successfully deleted");
             con.Close();
         }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            if (textBox1.Text == string.Empty)
-            {
-                MessageBox.Show("name can't be empty, please enter a value!");
-                return;
-
-            }
-
-            if (textBox2.Text == string.Empty)
-            {
-                MessageBox.Show("date can't be empty, please enter a value!");
-            }
-
-            if (textBox3.Text == string.Empty)
-            {
-                MessageBox.Show("application name can't be empty, please enter a value!");
-                return;
-
-            }
-
-            if (textBox4.Text == string.Empty)
-            {
-                MessageBox.Show("requirements can't be empty, please enter a value!");
-                return;
-
-            }
-
-
-            MySqlConnection con = new MySqlConnection("server=localhost;user id=root;database=userstory");
-            con.Open();
-            MySqlCommand cmd = new MySqlCommand("UPDATE `tester` SET `tester`= '" + textBox1.Text + "',`date`= '" + textBox2.Text + "',`app_name`= '" + textBox3.Text + "',`requirements`= '" + textBox4.Text + "' WHERE app_name = '" + textBox3.Text + "'", con);
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("record has been successfully updated");
-            con.Close();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            textBox1.Clear();
-            textBox2.Clear();
-            textBox3.Clear();
-            textBox4.Clear();
-        }
     }
 }

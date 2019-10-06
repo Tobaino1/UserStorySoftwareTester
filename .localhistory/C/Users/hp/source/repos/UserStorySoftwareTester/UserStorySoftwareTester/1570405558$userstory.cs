@@ -149,13 +149,5 @@ namespace UserStorySoftwareTester
             MessageBox.Show("record has been successfully updated");
             con.Close();
         }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            textBox1.Clear();
-            textBox2.Clear();
-            textBox3.Clear();
-            textBox4.Clear();
-        }
     }
 }

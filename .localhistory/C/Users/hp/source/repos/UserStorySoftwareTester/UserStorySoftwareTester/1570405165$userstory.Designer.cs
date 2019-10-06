@@ -247,7 +247,6 @@
             this.button2.TabIndex = 16;
             this.button2.Text = "&Erase";
             this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button5
             // 
@@ -264,7 +263,6 @@
             this.button5.TabIndex = 15;
             this.button5.Text = "&Update";
             this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
