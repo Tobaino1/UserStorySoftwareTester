@@ -34,7 +34,7 @@ namespace UserStorySoftwareTester
 
         private void button2_Click(object sender, EventArgs e)
         {
-            new ReportForm().Show();
+            new report().Show();
             this.Hide();
         }
     }

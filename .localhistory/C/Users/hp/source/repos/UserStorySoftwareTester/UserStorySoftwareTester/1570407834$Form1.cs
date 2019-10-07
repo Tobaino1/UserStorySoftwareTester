@@ -31,11 +31,5 @@ namespace UserStorySoftwareTester
             new userstory().Show();
             this.Hide();
         }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            new ReportForm().Show();
-            this.Hide();
-        }
     }
 }

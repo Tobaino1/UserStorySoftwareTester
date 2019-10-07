@@ -99,7 +99,7 @@ namespace UserStorySoftwareTester
         {
             if (textBox2.Text == string.Empty)
             {
-                MessageBox.Show("application name field can't be empty, please enter the application name & click delete button in the order to delete the record!");
+                MessageBox.Show("Phone number field can't be empty, please enter the customer phone no & click delete button in the order to delete the record!");
                 return;
 
             }

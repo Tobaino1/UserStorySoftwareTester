@@ -11,14 +11,15 @@ using System.Windows.Forms;
 
 namespace UserStorySoftwareTester
 {
-    public partial class userstory : Form
+    public partial class report : Form
     {
-        public userstory()
+        public report()
         {
+            InitializeComponent();
             InitializeComponent();
             MySqlConnection con = new MySqlConnection("server=localhost;user id=root;database=userstory");
             con.Open();
-            MySqlDataAdapter sda = new MySqlDataAdapter("select * from tester ", con);
+            MySqlDataAdapter sda = new MySqlDataAdapter("select * from reports ", con);
             DataTable dt = new DataTable();
             sda.Fill(dt);
             foreach (DataRow item in dt.Rows)
@@ -27,15 +28,24 @@ namespace UserStorySoftwareTester
                 dataGridView1.Rows[n].Cells[0].Value = item["tester"].ToString();
                 dataGridView1.Rows[n].Cells[1].Value = item["date"].ToString();
                 dataGridView1.Rows[n].Cells[2].Value = item["app_name"].ToString();
-                dataGridView1.Rows[n].Cells[3].Value = item["requirements"].ToString();
+                dataGridView1.Rows[n].Cells[3].Value = item["reports"].ToString();
+                dataGridView1.Rows[n].Cells[4].Value = item["improvements"].ToString();
 
 
             }
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
+        private void picClose_Click(object sender, EventArgs e)
         {
+            Application.Exit();
+        }
 
+        
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            new report().Show();
+            this.Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -44,17 +54,7 @@ namespace UserStorySoftwareTester
             this.Hide();
         }
 
-        private void lblTitle_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void userstory_Load(object sender, EventArgs e)
+        private void report_Load(object sender, EventArgs e)
         {
 
         }
@@ -82,14 +82,20 @@ namespace UserStorySoftwareTester
             }
             if (textBox4.Text == string.Empty)
             {
-                MessageBox.Show("user's requirement can't be empty, please enter a value!");
+                MessageBox.Show("reports can't be empty, please enter a value!");
+                return;
+
+            }
+            if (textBox5.Text == string.Empty)
+            {
+                MessageBox.Show("improvement on functions modules can't be empty, please enter a value!");
                 return;
 
             }
 
             MySqlConnection con = new MySqlConnection("server=localhost;user id=root;database=userstory");
             con.Open();
-            MySqlCommand cmd = new MySqlCommand("INSERT INTO tester (`tester`, `date`, `app_name`, `requirements`) VALUES ('" + textBox1.Text + "','" + textBox2.Text + "','" + textBox3.Text + "', '" + textBox4.Text + "')", con);
+            MySqlCommand cmd = new MySqlCommand("INSERT INTO reports (`tester`, `date`, `app_name`, `reports`,`improvements`) VALUES ('" + textBox1.Text + "','" + textBox2.Text + "','" + textBox3.Text + "', '" + textBox4.Text + "', '" + textBox5.Text + "')", con);
             cmd.ExecuteNonQuery();
             MessageBox.Show("user story has been succesfully inserted in the database, click refresh button");
             con.Close();
@@ -99,14 +105,14 @@ namespace UserStorySoftwareTester
         {
             if (textBox2.Text == string.Empty)
             {
-                MessageBox.Show("application name field can't be empty, please enter the application name & click delete button in the order to delete the record!");
+                MessageBox.Show("application name field can't be empty, please enter the Application name & click delete button in the order to delete the record!");
                 return;
 
             }
 
             MySqlConnection con = new MySqlConnection("server=localhost;user id=root;database=userstory");
             con.Open();
-            MySqlCommand cmd = new MySqlCommand("DELETE FROM `tester` WHERE app_name = '" + textBox3.Text + "'", con);
+            MySqlCommand cmd = new MySqlCommand("DELETE FROM `reports` WHERE app_name = '" + textBox3.Text + "'", con);
 
             cmd.ExecuteNonQuery();
             MessageBox.Show("record has been successfully deleted, click refresh button");
@@ -136,15 +142,21 @@ namespace UserStorySoftwareTester
 
             if (textBox4.Text == string.Empty)
             {
-                MessageBox.Show("requirements can't be empty, please enter a value!");
+                MessageBox.Show("reports can't be empty, please enter a value!");
                 return;
 
             }
 
+            if (textBox5.Text == string.Empty)
+            {
+                MessageBox.Show("module / function to be improved can't be empty, please enter a value!");
+                return;
+
+            }
 
             MySqlConnection con = new MySqlConnection("server=localhost;user id=root;database=userstory");
             con.Open();
-            MySqlCommand cmd = new MySqlCommand("UPDATE `tester` SET `tester`= '" + textBox1.Text + "',`date`= '" + textBox2.Text + "',`app_name`= '" + textBox3.Text + "',`requirements`= '" + textBox4.Text + "' WHERE app_name = '" + textBox3.Text + "'", con);
+            MySqlCommand cmd = new MySqlCommand("UPDATE `reports` SET `tester`= '" + textBox1.Text + "',`date`= '" + textBox2.Text + "',`app_name`= '" + textBox3.Text + "',`reports`= '" + textBox4.Text + "', `improvements`= '" + textBox5.Text + "', WHERE app_name = '" + textBox3.Text + "'", con);
             cmd.ExecuteNonQuery();
             MessageBox.Show("record has been successfully updated, click refresh button");
             con.Close();
@@ -156,17 +168,6 @@ namespace UserStorySoftwareTester
             textBox2.Clear();
             textBox3.Clear();
             textBox4.Clear();
-        }
-
-        private void picClose_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            new userstory().Show();
-            this.Hide();
         }
     }
 }
