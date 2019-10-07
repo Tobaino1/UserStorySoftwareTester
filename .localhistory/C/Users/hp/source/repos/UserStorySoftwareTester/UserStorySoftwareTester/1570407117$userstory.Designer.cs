@@ -87,13 +87,13 @@
             // 
             // picClose
             // 
-            this.picClose.BackColor = System.Drawing.Color.DarkRed;
+            this.picClose.BackColor = System.Drawing.Color.Maroon;
             this.picClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picClose.BackgroundImage")));
             this.picClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picClose.Location = new System.Drawing.Point(1225, 5);
+            this.picClose.Location = new System.Drawing.Point(1205, 5);
             this.picClose.Name = "picClose";
-            this.picClose.Size = new System.Drawing.Size(29, 32);
+            this.picClose.Size = new System.Drawing.Size(49, 36);
             this.picClose.TabIndex = 3;
             this.picClose.TabStop = false;
             this.picClose.Click += new System.EventHandler(this.picClose_Click);
@@ -243,9 +243,9 @@
             this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic);
-            this.button2.Location = new System.Drawing.Point(409, 10);
+            this.button2.Location = new System.Drawing.Point(378, 9);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(116, 63);
+            this.button2.Size = new System.Drawing.Size(75, 63);
             this.button2.TabIndex = 16;
             this.button2.Text = "&Erase";
             this.button2.UseVisualStyleBackColor = false;
@@ -260,9 +260,9 @@
             this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic);
-            this.button5.Location = new System.Drawing.Point(277, 10);
+            this.button5.Location = new System.Drawing.Point(274, 9);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(116, 63);
+            this.button5.Size = new System.Drawing.Size(75, 63);
             this.button5.TabIndex = 15;
             this.button5.Text = "&Update";
             this.button5.UseVisualStyleBackColor = false;
@@ -277,9 +277,9 @@
             this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic);
-            this.button4.Location = new System.Drawing.Point(140, 10);
+            this.button4.Location = new System.Drawing.Point(178, 9);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(116, 63);
+            this.button4.Size = new System.Drawing.Size(75, 63);
             this.button4.TabIndex = 14;
             this.button4.Text = "&Delete";
             this.button4.UseVisualStyleBackColor = false;
@@ -294,9 +294,9 @@
             this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic);
-            this.button3.Location = new System.Drawing.Point(9, 9);
+            this.button3.Location = new System.Drawing.Point(75, 9);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(116, 63);
+            this.button3.Size = new System.Drawing.Size(75, 63);
             this.button3.TabIndex = 13;
             this.button3.Text = "&Save New";
             this.button3.UseVisualStyleBackColor = false;

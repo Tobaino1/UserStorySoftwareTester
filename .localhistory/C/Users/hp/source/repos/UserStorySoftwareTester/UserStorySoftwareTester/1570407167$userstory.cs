@@ -91,7 +91,7 @@ namespace UserStorySoftwareTester
             con.Open();
             MySqlCommand cmd = new MySqlCommand("INSERT INTO tester (`tester`, `date`, `app_name`, `requirements`) VALUES ('" + textBox1.Text + "','" + textBox2.Text + "','" + textBox3.Text + "', '" + textBox4.Text + "')", con);
             cmd.ExecuteNonQuery();
-            MessageBox.Show("user story has been succesfully inserted in the database, click refresh button");
+            MessageBox.Show("user story has been succesfully inserted in the database");
             con.Close();
         }
 
@@ -109,7 +109,7 @@ namespace UserStorySoftwareTester
             MySqlCommand cmd = new MySqlCommand("DELETE FROM `tester` WHERE app_name = '" + textBox3.Text + "'", con);
 
             cmd.ExecuteNonQuery();
-            MessageBox.Show("record has been successfully deleted, click refresh button");
+            MessageBox.Show("record has been successfully deleted");
             con.Close();
         }
 
@@ -146,7 +146,7 @@ namespace UserStorySoftwareTester
             con.Open();
             MySqlCommand cmd = new MySqlCommand("UPDATE `tester` SET `tester`= '" + textBox1.Text + "',`date`= '" + textBox2.Text + "',`app_name`= '" + textBox3.Text + "',`requirements`= '" + textBox4.Text + "' WHERE app_name = '" + textBox3.Text + "'", con);
             cmd.ExecuteNonQuery();
-            MessageBox.Show("record has been successfully updated, click refresh button");
+            MessageBox.Show("record has been successfully updated");
             con.Close();
         }
 
